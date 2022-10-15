@@ -1,13 +1,13 @@
 //
-//  HomeView.swift
+//  AboutView.swift
 //  HW2
 //
-//  Created by roykesydone on 2022/10/14.
+//  Created by roykesydone on 2022/10/15.
 //
 
 import SwiftUI
 
-struct HomeView: View {
+struct AboutView: View {
     var body: some View {
         ZStack(alignment: .center){
             Image("rimworld-bg-no-word-hyper")
@@ -15,10 +15,12 @@ struct HomeView: View {
                 .ignoresSafeArea()
                 .scaledToFill()
             VStack{
-                Spacer()
+                Text("RIMWORLD")
+                    .foregroundColor(.white)
+                    .font(.system(size: 60, weight: .heavy))
+                    .offset(y:50)
+                    .shadow(radius: 30)
                 
-                GlitchTextView(text: "RIMWORLD")
-
                 Spacer()
                 HStack(spacing: 40){
                     Link(destination: URL(string: "https://store.steampowered.com/app/294100/RimWorld/")!)
@@ -45,8 +47,8 @@ struct HomeView: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
+struct AboutView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        AboutView()
     }
 }

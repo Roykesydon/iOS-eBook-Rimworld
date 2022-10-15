@@ -10,6 +10,8 @@
 		7024B9C428FA9874000CF27E /* FactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024B9C328FA9874000CF27E /* FactionDetailView.swift */; };
 		7024B9C628FAA147000CF27E /* FactionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024B9C528FAA147000CF27E /* FactionDetail.swift */; };
 		7024B9C828FAC5DC000CF27E /* DLCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024B9C728FAC5DC000CF27E /* DLCView.swift */; };
+		7024B9CA28FADE6B000CF27E /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024B9C928FADE6B000CF27E /* AboutView.swift */; };
+		7024B9CC28FAF1E5000CF27E /* GlitchTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024B9CB28FAF1E5000CF27E /* GlitchTextView.swift */; };
 		70861F3A28F98C1D00FCDDBA /* HW2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70861F3928F98C1D00FCDDBA /* HW2App.swift */; };
 		70861F3C28F98C1D00FCDDBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70861F3B28F98C1D00FCDDBA /* ContentView.swift */; };
 		70861F3E28F98C1E00FCDDBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70861F3D28F98C1E00FCDDBA /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 		7024B9C328FA9874000CF27E /* FactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionDetailView.swift; sourceTree = "<group>"; };
 		7024B9C528FAA147000CF27E /* FactionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionDetail.swift; sourceTree = "<group>"; };
 		7024B9C728FAC5DC000CF27E /* DLCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLCView.swift; sourceTree = "<group>"; };
+		7024B9C928FADE6B000CF27E /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		7024B9CB28FAF1E5000CF27E /* GlitchTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlitchTextView.swift; sourceTree = "<group>"; };
 		70861F3628F98C1D00FCDDBA /* HW2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70861F3928F98C1D00FCDDBA /* HW2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW2App.swift; sourceTree = "<group>"; };
 		70861F3B28F98C1D00FCDDBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,11 +67,13 @@
 			children = (
 				70861F3928F98C1D00FCDDBA /* HW2App.swift */,
 				70861F3B28F98C1D00FCDDBA /* ContentView.swift */,
+				7024B9C928FADE6B000CF27E /* AboutView.swift */,
 				70861F4928F9A63400FCDDBA /* FactionView.swift */,
 				7024B9C728FAC5DC000CF27E /* DLCView.swift */,
 				7024B9C328FA9874000CF27E /* FactionDetailView.swift */,
 				7024B9C528FAA147000CF27E /* FactionDetail.swift */,
 				70861F4728F99B9000FCDDBA /* HomeView.swift */,
+				7024B9CB28FAF1E5000CF27E /* GlitchTextView.swift */,
 				70861F3D28F98C1E00FCDDBA /* Assets.xcassets */,
 				70861F3F28F98C1E00FCDDBA /* Preview Content */,
 			);
@@ -152,11 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7024B9CA28FADE6B000CF27E /* AboutView.swift in Sources */,
 				70861F4828F99B9100FCDDBA /* HomeView.swift in Sources */,
 				7024B9C428FA9874000CF27E /* FactionDetailView.swift in Sources */,
 				70861F3C28F98C1D00FCDDBA /* ContentView.swift in Sources */,
 				70861F4A28F9A63400FCDDBA /* FactionView.swift in Sources */,
 				70861F3A28F98C1D00FCDDBA /* HW2App.swift in Sources */,
+				7024B9CC28FAF1E5000CF27E /* GlitchTextView.swift in Sources */,
 				7024B9C828FAC5DC000CF27E /* DLCView.swift in Sources */,
 				7024B9C628FAA147000CF27E /* FactionDetail.swift in Sources */,
 			);

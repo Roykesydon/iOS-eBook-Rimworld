@@ -12,6 +12,9 @@ struct HW2App: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onAppear{
+                    UITabBar.appearance().backgroundColor = UIColor(Color("panel-1"))
+                }
         }
     }
 }

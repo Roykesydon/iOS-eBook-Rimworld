@@ -26,38 +26,48 @@ struct FactionView: View {
         ]
         
         let columns = Array(repeating: GridItem(), count: 1)
-        VStack(alignment: .leading){
-            Text("陣營")
-                .font(.system(size: 36, weight: .heavy))
-                .padding(20)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .background(Color(red: 36/256, green: 36/256, blue: 36/256, opacity: 1.0))
+        ZStack(alignment: .center){
+            //            Image("rimworld-bg-no-word-hyper")
+            //                .resizable()
+            //                .ignoresSafeArea()
+            //                .scaledToFill()
             NavigationView {
-                ScrollView{
-                    LazyVGrid(columns: columns, alignment: .leading, spacing: 30) {
-                        ForEach(factions) {
-                            faction in
-                            NavigationLink {
-                                FactionDetailView(factionName: faction.name)
-                            }label:{
-                                HStack{
-                                    Image("\(faction.image)")
-                                        .resizable()
-                                        .frame(width: 60, height: 60)
-                                    Text("\(faction.name)")
-                                        .font(.system(size: 22, weight: .bold))
-                                        .frame(maxWidth: .infinity, alignment: .leading)
-                                        .padding(20)
-                                }
-                            }.foregroundColor(.primary)
-                        }
-                    }.padding(30)
-                }
+                VStack(alignment: .leading, spacing: 0){
+                    Text("陣營")
+                        .font(.system(size: 36, weight: .heavy))
+                        .padding(20)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(Color("panel-1"))
+                    
+                    ScrollView{
+                        LazyVGrid(columns: columns, alignment: .leading, spacing: 30) {
+                            ForEach(factions) {
+                                faction in
+                                NavigationLink {
+                                    FactionDetailView(factionName: faction.name)
+                                }label:{
+                                    HStack{
+                                        Image("\(faction.image)")
+                                            .resizable()
+                                            .frame(width: 60, height: 60)
+                                            .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 0))
+                                        Text("\(faction.name)")
+                                            .font(.system(size: 22, weight: .bold))
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                            .padding(20)
+                                    }
+                                    .background(Color("panel-1"))
+                                    .padding(10)
+                                }.foregroundColor(.primary)
+                            }
+                        }.padding(30)
+                    }
+                }.background(Image("rimworld-bg-no-word-hyper")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .scaledToFill())
             }
         }
-        
-        
-        
     }
 }
 

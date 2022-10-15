@@ -14,9 +14,9 @@ struct ContentView: View {
                 .tabItem {
                     Label("首頁", systemImage: "house.circle.fill").padding(EdgeInsets(top: 0.0, leading: 0, bottom: 0, trailing: 0))
                 }
-            Color.blue
+            AboutView()
                 .tabItem {
-                    Label("簡介", systemImage: "book.circle.fill")
+                    Label("介紹", systemImage: "book.circle.fill")
                 }
             FactionView()
                 .tabItem {
@@ -27,15 +27,16 @@ struct ContentView: View {
                     Label("DLC", systemImage: "cart.circle.fill")
                 }
         }.padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-            
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
+        
         ContentView()
-//            .onAppear{
-//            UITabBar.appearance().backgroundColor = UIColor.blue
-//        }
+            .onAppear{
+                UITabBar.appearance().backgroundColor = UIColor(Color("tab-color"))
+            }
     }
 }

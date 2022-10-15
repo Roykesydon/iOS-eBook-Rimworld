@@ -45,7 +45,7 @@ struct FactionDetailView: View {
                 }
                 .padding(20)
                 .frame(height: 200, alignment: .center)
-                .background(Color(red: 36/256, green: 36/256, blue: 36/256, opacity: 1.0))
+                .background(Color("panel-1"))
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
                 
                 // 文字描述
