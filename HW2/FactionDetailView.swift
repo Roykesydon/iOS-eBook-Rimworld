@@ -11,6 +11,8 @@ struct FactionDetailView: View {
     let factionName: String
     var factionInfo: FactionDetail = FactionDetail()
     
+    let pawnsColumns = Array(repeating: GridItem(), count: 2)
+    
     init(factionName: String){
         self.factionName = factionName
         
@@ -24,11 +26,6 @@ struct FactionDetailView: View {
     var body: some View {
         GeometryReader { metrics in
             ZStack{
-//                Image("rimworld-bg-no-word-hyper")
-//                    .resizable()
-//                    .ignoresSafeArea()
-//                    .scaledToFill()
-//                    .background(.black)
                 VStack{
                 }
                 .frame(width: metrics.size.width * 1, height: metrics.size.height * 1)
@@ -60,27 +57,53 @@ struct FactionDetailView: View {
                         .padding(20)
                         .frame(height: 200, alignment: .center)
                         .background(Color("panel-1"))
-                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 20))
-                        
-                        // 文字描述
-                        ForEach(self.factionInfo.lore, id:\.self) { array in
-                            VStack(alignment: .leading){
-                                Text(array[0])
-                                    .font(.system(size: 25, weight: .bold))
-                                
-                                Divider()
-                                    .frame(height: 2)
-                                    .overlay(.primary)
-                                
-                                Text(array[1])
-                            }.padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
-                        }
-                        .padding(20)
-                        .background(Color("panel-1"))
                         .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                         
-                        // 單位
+                        // 文字描述
+                        TitleDividerView(title: "介紹", fontSize: 30)
                         
+                        ScrollView(showsIndicators: false){
+                            ForEach(self.factionInfo.lore, id:\.self) { array in
+                                VStack(alignment: .leading){
+                                    Text(array[0])
+                                        .font(.system(size: 25, weight: .bold))
+                                    
+                                    Divider()
+                                        .frame(height: 2)
+                                        .overlay(.primary)
+                                    
+                                    Text(array[1])
+                                }.padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                            }
+                            .padding(20)
+                            .background(Color("panel-1"))
+                            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                        }.frame(height: metrics.size.height * 0.5)
+                        
+                        // 單位
+                        TitleDividerView(title: "單位", fontSize: 30)
+                        
+                        Text("數值從上至下是「名稱」、「」、")
+                        
+                        LazyVGrid(columns: pawnsColumns) {
+                            ForEach(self.factionInfo.pawns){
+                                pawn in
+                                HStack{
+                                    Image(pawn.image)
+                                        .resizable()
+                                        .ignoresSafeArea()
+                                        .scaledToFit()
+                                        .frame(width:metrics.size.width * 0.15)
+                                    
+                                    VStack(alignment: .leading){
+                                        Text("\(pawn.name)")
+                                            .font(.system(size: 20, weight: .bold))
+                                        Text("\(pawn.combatPower)")
+                                        Text("\(pawn.weapon)")
+                                    }
+                                }.frame(width: metrics.size.width * 0.35)
+                            }
+                        }
                     }
                 }
                 .padding(20)
@@ -91,6 +114,6 @@ struct FactionDetailView: View {
 
 struct FactionDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        FactionDetailView(factionName: "機械族")
+        FactionDetailView(factionName: "部落")
     }
 }

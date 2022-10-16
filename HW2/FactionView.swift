@@ -30,10 +30,17 @@ struct FactionView: View {
             Faction(name: "先祖", image: "ancients-image")
         ]
         
-        let columns = Array(repeating: GridItem(), count: 1)
+        
         GeometryReader { metrics in
-            ZStack(alignment: .center){
-                NavigationView {
+            
+            NavigationView {
+                ZStack{
+                    Image("rimworld-bg-no-word-hyper")
+                        .resizable()
+                        .ignoresSafeArea()
+                        .scaledToFill()
+                        .frame(width:metrics.size.width * 1.0)
+                    
                     VStack(alignment: .leading, spacing: 0){
                         GlitchTextView(text: "陣營", fontSize: 35)
                             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
@@ -45,7 +52,6 @@ struct FactionView: View {
                             .overlay(.white)
                             .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
                         
-                        //                        ScrollView(showsIndicators: false){
                         List{
                             Section(header: ShadowText(text: "人類主導派系", fontSize: 20.0)){
                                 Group{
@@ -57,20 +63,18 @@ struct FactionView: View {
                             }
                             Section(header: ShadowText(text: "無領袖派系", fontSize: 20.0)){
                                 Group{
-                                    ForEach(humanLeaderFactions) {
+                                    ForEach(leaderlessFactions) {
                                         faction in
                                         FactionLinkView(faction: faction)
                                     }
                                 }
                             }
-                                
+                            
                         }.scrollContentBackground(.hidden)
-                    }.background(Image("rimworld-bg-no-word-hyper")
-                        .resizable()
-                        .ignoresSafeArea()
-                        .scaledToFill())
+                    }
                 }
             }
+            
         }
     }
 }

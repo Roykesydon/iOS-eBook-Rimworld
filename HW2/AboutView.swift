@@ -10,9 +10,10 @@ import AVKit
 
 struct TitleDividerView: View {
     let title: String
+    var fontSize: Double = 30
     
     var body: some View {
-        ShadowText(text: title, fontSize: 30)
+        ShadowText(text: title, fontSize: fontSize)
             .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 0))
             .frame(maxWidth: .infinity, maxHeight: 50, alignment: .leading)
 

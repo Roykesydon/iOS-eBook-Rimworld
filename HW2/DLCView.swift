@@ -15,6 +15,7 @@ struct DLCView: View {
                     .resizable()
                     .ignoresSafeArea()
                     .scaledToFill()
+                    .frame(width:metrics.size.width * 1.0)
                 
                 VStack(alignment: .leading, spacing: 0){
                     GlitchTextView(text: "DLC", fontSize: 35)

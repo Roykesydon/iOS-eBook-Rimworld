@@ -15,7 +15,7 @@ struct HomeView: View {
                     .resizable()
                     .ignoresSafeArea()
                     .scaledToFill()
-                    .frame(height: metrics.size.height * 1.00)
+                    .frame(width:metrics.size.width * 1.0)
                 
                 VStack{
                     Spacer()
