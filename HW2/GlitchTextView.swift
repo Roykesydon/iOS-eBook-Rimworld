@@ -9,29 +9,30 @@ import SwiftUI
 
 struct ShadowText: View{
     let text: String
+    var fontSize: Double = 60
     var black: Bool = false
       
     var body: some View {
-        let pinkColor = black ? Color.black : Color(red: 110/255, green: 248/255, blue: 255/255)
-        let blueColor = black ? Color.black : Color(red: 255/255, green: 105/255, blue: 192/255)
+        let blueColor = black ? Color.black : Color(red: 110/255, green: 248/255, blue: 255/255)
+        let pinkColor = black ? Color.black : Color(red: 255/255, green: 105/255, blue: 192/255)
         let whiteColor = black ? Color.black : Color.white
         
         ZStack{
             // blue
             Text(text)
-                .foregroundColor(pinkColor)
-                .font(.system(size: 60, weight: .heavy))
+                .foregroundColor(blueColor)
+                .font(.system(size: self.fontSize, weight: .heavy))
                 .offset(x:-2)
             
             //pink
             Text(text)
-                .foregroundColor(blueColor)
-                .font(.system(size: 60, weight: .heavy))
+                .foregroundColor(pinkColor)
+                .font(.system(size: self.fontSize, weight: .heavy))
                 .offset(x:2)
             
             Text(text)
                 .foregroundColor(whiteColor)
-                .font(.system(size: 60, weight: .heavy))
+                .font(.system(size: self.fontSize, weight: .heavy))
         }
     }
 }
@@ -41,53 +42,51 @@ struct GlitchTextView: View {
     @State private var moveXDiff2: Double = 0
     
     let text: String
+    var fontSize: Double = 60
     
     var body: some View {
         ZStack{
-            ShadowText(text: text)
+            ShadowText(text: text, fontSize: fontSize)
             
             // upper glitch
-            ShadowText(text: text, black: true)
+            ShadowText(text: text, fontSize: fontSize, black: true)
                 .foregroundColor(.black)
-                .font(.system(size: 60, weight: .heavy))
                 .fixedSize()
                 .frame(height:5)
                 .offset(y:10)
                 .clipped()
                 .offset(x: 0, y: -10)
-                .animation(.easeOut(duration: 0.2)
+                .animation(.easeOut(duration: 0.1)
                     .repeatCount(1, autoreverses: true), value: moveXDiff1)
-            ShadowText(text: text)
+            ShadowText(text: text, fontSize: fontSize)
                 .foregroundColor(.white)
-                .font(.system(size: 60, weight: .heavy))
                 .fixedSize()
                 .frame(height:5)
                 .offset(y:10)
                 .clipped()
                 .offset(x: moveXDiff1, y: -10)
-                .animation(.easeOut(duration: 0.2)
+                .animation(.easeOut(duration: 0.1)
                     .repeatCount(1, autoreverses: true), value: moveXDiff1)
             
             //lower glitch
-            ShadowText(text: text, black: true)
+            ShadowText(text: text, fontSize: fontSize, black: true)
                 .foregroundColor(.black)
-                .font(.system(size: 60, weight: .heavy))
                 .fixedSize()
                 .frame(height:5)
                 .offset(y:-15)
                 .clipped()
                 .offset(x: 0, y: 15)
-                .animation(.easeOut(duration: 0.2)
+                .animation(.easeOut(duration: 0.1)
                     .repeatCount(1, autoreverses: true), value: moveXDiff2)
-            ShadowText(text: text)
+            ShadowText(text: text, fontSize: fontSize)
                 .foregroundColor(.white)
-                .font(.system(size: 60, weight: .heavy))
+//                .font(.system(size: fontSize, weight: .heavy))
                 .fixedSize()
                 .frame(height:5)
                 .offset(y:-15)
                 .clipped()
                 .offset(x: moveXDiff2, y: 15)
-                .animation(.easeOut(duration: 0.2)
+                .animation(.easeOut(duration: 0.1)
                     .repeatCount(1, autoreverses: true)
                            , value: moveXDiff2)
             

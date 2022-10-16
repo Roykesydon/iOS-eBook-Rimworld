@@ -9,37 +9,42 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        ZStack(alignment: .center){
-            Image("rimworld-bg-no-word-hyper")
-                .resizable()
-                .ignoresSafeArea()
-                .scaledToFill()
-            VStack{
-                Spacer()
+        GeometryReader { metrics in
+            ZStack(alignment: .center){
+                Image("rimworld-bg-no-word-hyper")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .scaledToFill()
+                    .frame(height: metrics.size.height * 1.00)
                 
-                GlitchTextView(text: "RIMWORLD")
-
-                Spacer()
-                HStack(spacing: 40){
-                    Link(destination: URL(string: "https://store.steampowered.com/app/294100/RimWorld/")!)
-                    {
-                        Image("steam-icon")
-                            .resizable()
-                            .frame(width: 50, height: 50)
+                VStack{
+                    Spacer()
+                    
+                    GlitchTextView(text: "RIMWORLD")
+                    
+                    Spacer()
+                    HStack(spacing: 40){
+                        Link(destination: URL(string: "https://store.steampowered.com/app/294100/RimWorld/")!)
+                        {
+                            Image("steam-icon")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                        }
+                        Link(destination: URL(string: "https://twitter.com/TynanSylvester")!)
+                        {
+                            Image("twitter-icon")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                        }
+                        Link(destination: URL(string: "https://www.youtube.com/c/tynansylvester/videos")!)
+                        {
+                            Image("youtube-icon")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                        }
                     }
-                    Link(destination: URL(string: "https://twitter.com/TynanSylvester")!)
-                    {
-                        Image("twitter-icon")
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                    }
-                    Link(destination: URL(string: "https://www.youtube.com/c/tynansylvester/videos")!)
-                    {
-                        Image("youtube-icon")
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                    }
-                }.padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
+                }
             }
         }
     }

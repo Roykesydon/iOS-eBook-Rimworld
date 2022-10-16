@@ -13,7 +13,7 @@ struct HW2App: App {
         WindowGroup {
             ContentView()
                 .onAppear{
-                    UITabBar.appearance().backgroundColor = UIColor(Color("panel-1"))
+                    UITabBar.appearance().backgroundColor = UIColor(Color("tab-color"))
                 }
         }
     }

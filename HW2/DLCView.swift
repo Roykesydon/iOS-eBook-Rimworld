@@ -9,23 +9,37 @@ import SwiftUI
 
 struct DLCView: View {
     var body: some View {
-        let columns = Array(repeating: GridItem(), count: 1)
-        VStack(alignment: .leading){
-            Text("DLC")
-                .font(.system(size: 36, weight: .heavy))
-                .padding(20)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .background(Color(red: 36/256, green: 36/256, blue: 36/256, opacity: 1.0))
-            NavigationView {
-                ScrollView{
+        GeometryReader { metrics in
+            ZStack(alignment: .center){
+                Image("rimworld-bg-no-word-hyper")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .scaledToFill()
+                
+                VStack(alignment: .leading, spacing: 0){
+                    GlitchTextView(text: "DLC", fontSize: 35)
+                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    
+                    Divider()
+                        .frame(height: 2)
+                        .overlay(.white)
+                        .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
+                    
+                    ScrollView(showsIndicators: false){
+                        
+                    }.padding(30)
                 }
+                
+                
             }
         }
     }
-}
-
-struct DLCView_Previews: PreviewProvider {
-    static var previews: some View {
-        DLCView()
+    
+    struct DLCView_Previews: PreviewProvider {
+        static var previews: some View {
+            DLCView()
+        }
     }
 }

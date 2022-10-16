@@ -12,6 +12,7 @@
 		7024B9C828FAC5DC000CF27E /* DLCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024B9C728FAC5DC000CF27E /* DLCView.swift */; };
 		7024B9CA28FADE6B000CF27E /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024B9C928FADE6B000CF27E /* AboutView.swift */; };
 		7024B9CC28FAF1E5000CF27E /* GlitchTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024B9CB28FAF1E5000CF27E /* GlitchTextView.swift */; };
+		7024B9D128FBE80F000CF27E /* rimworld-trailer.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7024B9D028FBE80F000CF27E /* rimworld-trailer.mp4 */; };
 		70861F3A28F98C1D00FCDDBA /* HW2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70861F3928F98C1D00FCDDBA /* HW2App.swift */; };
 		70861F3C28F98C1D00FCDDBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70861F3B28F98C1D00FCDDBA /* ContentView.swift */; };
 		70861F3E28F98C1E00FCDDBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70861F3D28F98C1E00FCDDBA /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		7024B9C728FAC5DC000CF27E /* DLCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLCView.swift; sourceTree = "<group>"; };
 		7024B9C928FADE6B000CF27E /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		7024B9CB28FAF1E5000CF27E /* GlitchTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlitchTextView.swift; sourceTree = "<group>"; };
+		7024B9D028FBE80F000CF27E /* rimworld-trailer.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "rimworld-trailer.mp4"; path = "../../../Downloads/rimworld-trailer.mp4"; sourceTree = "<group>"; };
 		70861F3628F98C1D00FCDDBA /* HW2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70861F3928F98C1D00FCDDBA /* HW2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW2App.swift; sourceTree = "<group>"; };
 		70861F3B28F98C1D00FCDDBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		70861F3828F98C1D00FCDDBA /* HW2 */ = {
 			isa = PBXGroup;
 			children = (
+				7024B9D028FBE80F000CF27E /* rimworld-trailer.mp4 */,
 				70861F3928F98C1D00FCDDBA /* HW2App.swift */,
 				70861F3B28F98C1D00FCDDBA /* ContentView.swift */,
 				7024B9C928FADE6B000CF27E /* AboutView.swift */,
@@ -148,6 +151,7 @@
 			files = (
 				70861F4128F98C1E00FCDDBA /* Preview Assets.xcassets in Resources */,
 				70861F3E28F98C1E00FCDDBA /* Assets.xcassets in Resources */,
+				7024B9D128FBE80F000CF27E /* rimworld-trailer.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

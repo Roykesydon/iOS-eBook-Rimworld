@@ -26,14 +26,14 @@ struct ContentView: View {
                 .tabItem {
                     Label("DLC", systemImage: "cart.circle.fill")
                 }
-        }.padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+        }
+        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
         
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        
         ContentView()
             .onAppear{
                 UITabBar.appearance().backgroundColor = UIColor(Color("tab-color"))
