@@ -40,9 +40,11 @@ struct FactionDetailView: View {
                                     .resizable()
                                     .frame(width: 60, height: 60)
                                 Text(self.factionInfo.name)
+                                    .foregroundColor(.white)
                                     .font(.system(size: 22, weight: .bold))
                                     .frame(maxWidth: .infinity)
                                 Text(self.factionInfo.engName)
+                                    .foregroundColor(.white)
                                     .font(.system(size: 15, weight: .bold))
                                     .frame(maxWidth: .infinity)
                             }
@@ -52,11 +54,12 @@ struct FactionDetailView: View {
                             
                             ScrollView{
                                 Text(self.factionInfo.introduction)
+                                    .foregroundColor(.white)
                             }
                         }
                         .padding(20)
                         .frame(height: 200, alignment: .center)
-                        .background(Color("panel-1"))
+                        //                        .background(Color("panel-1"))
                         .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                         
                         // 文字描述
@@ -67,41 +70,52 @@ struct FactionDetailView: View {
                                 VStack(alignment: .leading){
                                     Text(array[0])
                                         .font(.system(size: 25, weight: .bold))
+                                        .foregroundColor(.white)
                                     
                                     Divider()
                                         .frame(height: 2)
                                         .overlay(.primary)
                                     
                                     Text(array[1])
+                                        .foregroundColor(.white)
                                 }.padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                             }
                             .padding(20)
-                            .background(Color("panel-1"))
+                            //                            .background(Color("panel-1"))
                             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                         }.frame(height: metrics.size.height * 0.5)
                         
                         // 單位
                         TitleDividerView(title: "單位", fontSize: 30)
                         
-                        Text("數值從上至下是「名稱」、「」、")
-                        
-                        LazyVGrid(columns: pawnsColumns) {
-                            ForEach(self.factionInfo.pawns){
-                                pawn in
-                                HStack{
-                                    Image(pawn.image)
-                                        .resizable()
-                                        .ignoresSafeArea()
-                                        .scaledToFit()
-                                        .frame(width:metrics.size.width * 0.15)
-                                    
-                                    VStack(alignment: .leading){
-                                        Text("\(pawn.name)")
-                                            .font(.system(size: 20, weight: .bold))
-                                        Text("\(pawn.combatPower)")
-                                        Text("\(pawn.weapon)")
-                                    }
-                                }.frame(width: metrics.size.width * 0.35)
+                        VStack{
+                            Text("數值從上至下是「名稱」、「戰鬥力」和「部分武器」")
+                                .foregroundColor(.white)
+                                .padding(20)
+                            
+                            LazyVGrid(columns: pawnsColumns) {
+                                ForEach(self.factionInfo.pawns){
+                                    pawn in
+                                    HStack{
+                                        Image(pawn.image)
+                                            .resizable()
+                                            .ignoresSafeArea()
+                                            .scaledToFit()
+                                            .frame(width:metrics.size.width * 0.12)
+                                        
+                                        VStack(alignment: .leading){
+                                            Text("\(pawn.name)")
+                                                .font(.system(size: 13, weight: .bold))
+                                                .foregroundColor(.white)
+                                            Text("\(pawn.combatPower)")
+                                                .font(.system(size: 13))
+                                                .foregroundColor(.white)
+                                            Text("\(pawn.weapon)")
+                                                .font(.system(size: 13))
+                                                .foregroundColor(.white)
+                                        }
+                                    }.frame(width: metrics.size.width * 0.30)
+                                }
                             }
                         }
                     }

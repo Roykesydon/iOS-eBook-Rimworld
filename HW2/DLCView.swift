@@ -28,19 +28,24 @@ struct DLCView: View {
                         .overlay(.white)
                         .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
                     
-                    ScrollView(showsIndicators: false){
-                        
-                    }.padding(30)
+                    List{
+                        Group{
+                            ForEach(DLCTable) {
+                                DLCInfo in
+                                DLCBlockView(DLCInfo: DLCInfo)
+                            }
+                        }
+                    }.scrollContentBackground(.hidden)
                 }
-                
-                
             }
         }
     }
     
     struct DLCView_Previews: PreviewProvider {
         static var previews: some View {
-            DLCView()
+            DLCView().onAppear(){
+                UITableViewCell.appearance().backgroundColor = .clear
+            }
         }
     }
 }
