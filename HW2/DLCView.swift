@@ -17,7 +17,7 @@ struct DLCView: View {
                     .scaledToFill()
                     .frame(width:metrics.size.width * 1.0)
                 
-                VStack(alignment: .leading, spacing: 0){
+                VStack(alignment: .center, spacing: 0){
                     GlitchTextView(text: "DLC", fontSize: 35)
                         .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -32,7 +32,11 @@ struct DLCView: View {
                         Group{
                             ForEach(DLCTable) {
                                 DLCInfo in
-                                DLCBlockView(DLCInfo: DLCInfo)
+                                HStack{
+                                    Spacer()
+                                    DLCBlockView(DLCInfo: DLCInfo, metrics: metrics)
+                                    Spacer()
+                                }.listRowBackground(Color(red: 0, green: 0, blue: 0, opacity: 0.8))
                             }
                         }
                     }.scrollContentBackground(.hidden)
