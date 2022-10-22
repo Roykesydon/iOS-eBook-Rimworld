@@ -97,11 +97,30 @@ struct AboutView: View {
                                 
                                 VideoPlayer(player: trailerPlayer)
                                     .scaledToFit()
-                                    .frame(maxWidth: metrics.size.width * 0.6, maxHeight:metrics.size.height * 0.5 , alignment: .center)
+                                    .frame(height:metrics.size.height*0.4)
+                                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                             }
                             
                             // 簡介
                             TitleDividerView(title: "簡介")
+                            
+                            TabView {
+                                Image("rimworld-1")
+                                    .resizable()
+                                    .scaledToFit()
+                                Image("rimworld-2")
+                                    .resizable()
+                                    .scaledToFit()
+                                Image("rimworld-3")
+                                    .resizable()
+                                    .scaledToFit()
+                                Image("rimworld-4")
+                                    .resizable()
+                                    .scaledToFit()
+                            }
+                            .frame(height:metrics.size.height*0.3)
+                            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                            .tabViewStyle(.page)
                             
                             DetailTextView(text: "《邊緣世界》是一款故事生成遊戲。它旨在與人合寫出悲劇、轉折和最終獲得勝利的故事，可能是被囚禁的海賊、或絕望的殖民者；陷入飢荒、或尋得一線生機。藉由操縱世界向您發出的「隨機」事件來編寫故事。每場雷雨、海賊襲擊和旅行商團都是由人工智能故事敍述者安排給您的考驗。")
                             

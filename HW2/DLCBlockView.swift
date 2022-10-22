@@ -54,7 +54,7 @@ struct DLCBlockView: View {
                         
                         // 預覽圖區
                         if DLCInfo.imageCount > 0{
-                            ScrollView(.horizontal) {
+                            ScrollView(.horizontal, showsIndicators: false) {
                                 LazyHGrid(rows: rows) {
                                     ForEach(1 ..< DLCInfo.imageCount + 1){
                                         index in

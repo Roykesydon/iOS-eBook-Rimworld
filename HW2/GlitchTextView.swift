@@ -41,6 +41,8 @@ struct GlitchTextView: View {
     @State private var moveXDiff1: Double = 0
     @State private var moveXDiff2: Double = 0
     
+    @State private var timer: Timer?
+    
     let text: String
     var fontSize: Double = 60
     
@@ -90,13 +92,14 @@ struct GlitchTextView: View {
                     .repeatCount(1, autoreverses: true)
                            , value: moveXDiff2)
             
-        }.onAppear{
-            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { _ in
-                updateCounting()
+        }
+        .onAppear{
+            self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { _ in
+                updateText()
             })
             
             
-            func updateCounting(){
+            func updateText(){
                 if (moveXDiff1 - 0 > 1e-5){
                     moveXDiff1 = 0
                     moveXDiff2 = 0
@@ -108,6 +111,9 @@ struct GlitchTextView: View {
             }
             
             //            moveXDiff = 5
+        }
+        .onDisappear {
+            self.timer?.invalidate()
         }
     }
 }
