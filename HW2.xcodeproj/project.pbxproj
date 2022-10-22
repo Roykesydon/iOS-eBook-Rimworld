@@ -15,6 +15,7 @@
 		7024B9D128FBE80F000CF27E /* rimworld-trailer.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7024B9D028FBE80F000CF27E /* rimworld-trailer.mp4 */; };
 		7024B9D328FE7EF1000CF27E /* DLC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024B9D228FE7EF1000CF27E /* DLC.swift */; };
 		7024B9D528FE8C2F000CF27E /* DLCBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024B9D428FE8C2F000CF27E /* DLCBlockView.swift */; };
+		7024B9D82903CF31000CF27E /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024B9D72903CF31000CF27E /* TestView.swift */; };
 		70861F3A28F98C1D00FCDDBA /* HW2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70861F3928F98C1D00FCDDBA /* HW2App.swift */; };
 		70861F3C28F98C1D00FCDDBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70861F3B28F98C1D00FCDDBA /* ContentView.swift */; };
 		70861F3E28F98C1E00FCDDBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70861F3D28F98C1E00FCDDBA /* Assets.xcassets */; };
@@ -32,6 +33,8 @@
 		7024B9D028FBE80F000CF27E /* rimworld-trailer.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "rimworld-trailer.mp4"; path = "../../../Downloads/rimworld-trailer.mp4"; sourceTree = "<group>"; };
 		7024B9D228FE7EF1000CF27E /* DLC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLC.swift; sourceTree = "<group>"; };
 		7024B9D428FE8C2F000CF27E /* DLCBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLCBlockView.swift; sourceTree = "<group>"; };
+		7024B9D62903AC83000CF27E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7024B9D72903CF31000CF27E /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		70861F3628F98C1D00FCDDBA /* HW2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70861F3928F98C1D00FCDDBA /* HW2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW2App.swift; sourceTree = "<group>"; };
 		70861F3B28F98C1D00FCDDBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,10 +74,12 @@
 		70861F3828F98C1D00FCDDBA /* HW2 */ = {
 			isa = PBXGroup;
 			children = (
+				7024B9D62903AC83000CF27E /* Info.plist */,
 				7024B9D028FBE80F000CF27E /* rimworld-trailer.mp4 */,
 				70861F3928F98C1D00FCDDBA /* HW2App.swift */,
 				70861F3B28F98C1D00FCDDBA /* ContentView.swift */,
 				7024B9C928FADE6B000CF27E /* AboutView.swift */,
+				7024B9D72903CF31000CF27E /* TestView.swift */,
 				70861F4928F9A63400FCDDBA /* FactionView.swift */,
 				7024B9C728FAC5DC000CF27E /* DLCView.swift */,
 				7024B9D428FE8C2F000CF27E /* DLCBlockView.swift */,
@@ -168,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7024B9D82903CF31000CF27E /* TestView.swift in Sources */,
 				7024B9CA28FADE6B000CF27E /* AboutView.swift in Sources */,
 				70861F4828F99B9100FCDDBA /* HomeView.swift in Sources */,
 				7024B9C428FA9874000CF27E /* FactionDetailView.swift in Sources */,
@@ -309,9 +315,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HW2/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HW2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -337,9 +343,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HW2/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HW2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

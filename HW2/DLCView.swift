@@ -36,10 +36,13 @@ struct DLCView: View {
                                     Spacer()
                                     DLCBlockView(DLCInfo: DLCInfo, metrics: metrics)
                                     Spacer()
-                                }.listRowBackground(Color(red: 0, green: 0, blue: 0, opacity: 0.8))
+                                }.listRowBackground(Color(red: 0, green: 0, blue: 0, opacity: 0.5))
                             }
                         }
-                    }.scrollContentBackground(.hidden)
+                    }
+                    .scrollContentBackground(.hidden)
+                    .background(LinearGradient(gradient: Gradient(colors: [Color(red: 0, green: 0, blue: 0, opacity: 0), Color(red: 0, green: 0, blue: 1, opacity: 0.2)]), startPoint: .top, endPoint: .bottom))
+                    
                 }
             }
         }

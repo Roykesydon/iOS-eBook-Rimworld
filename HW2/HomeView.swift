@@ -45,6 +45,8 @@ struct HomeView: View {
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
                 }
+                .frame(maxWidth: .infinity)
+                .background(LinearGradient(gradient: Gradient(colors: [Color(red: 0, green: 0, blue: 0, opacity: 0), Color(red: 0, green: 0, blue: 1, opacity: 0.2)]), startPoint: .top, endPoint: .bottom))
             }
         }
     }

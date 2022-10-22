@@ -32,14 +32,14 @@ struct FactionView: View {
         
         
         GeometryReader { metrics in
-            
             NavigationView {
                 ZStack{
                     Image("rimworld-bg-no-word-hyper")
                         .resizable()
                         .ignoresSafeArea()
                         .scaledToFill()
-                        .frame(width:metrics.size.width * 1.0)
+                        .frame(width:metrics.size.width * 0.2)
+                    
                     
                     VStack(alignment: .leading, spacing: 0){
                         GlitchTextView(text: "陣營", fontSize: 35)
@@ -72,6 +72,7 @@ struct FactionView: View {
                             
                         }.scrollContentBackground(.hidden)
                     }
+                    .background(LinearGradient(gradient: Gradient(colors: [Color(red: 0, green: 0, blue: 0, opacity: 0), Color(red: 0, green: 0, blue: 1, opacity: 0.2)]), startPoint: .top, endPoint: .bottom))
                 }
             }
             
