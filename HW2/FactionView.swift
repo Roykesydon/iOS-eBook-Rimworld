@@ -74,8 +74,9 @@ struct FactionView: View {
                     }
                     .background(LinearGradient(gradient: Gradient(colors: [Color(red: 0, green: 0, blue: 0, opacity: 0), Color(red: 0, green: 0, blue: 1, opacity: 0.2)]), startPoint: .top, endPoint: .bottom))
                 }
+                .navigationTitle("陣營")
+                .navigationBarHidden(true)
             }
-            
         }
     }
 }
