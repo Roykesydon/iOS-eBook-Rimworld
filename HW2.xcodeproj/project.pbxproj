@@ -20,6 +20,7 @@
 		70861F4128F98C1E00FCDDBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70861F4028F98C1E00FCDDBA /* Preview Assets.xcassets */; };
 		70861F4828F99B9100FCDDBA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70861F4728F99B9000FCDDBA /* HomeView.swift */; };
 		70861F4A28F9A63400FCDDBA /* FactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70861F4928F9A63400FCDDBA /* FactionView.swift */; };
+		70985E4F295B227000FC5A8C /* rimworld-trailer.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 70985E4E295B227000FC5A8C /* rimworld-trailer.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		70861F4028F98C1E00FCDDBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		70861F4728F99B9000FCDDBA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		70861F4928F9A63400FCDDBA /* FactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionView.swift; sourceTree = "<group>"; };
+		70985E4E295B227000FC5A8C /* rimworld-trailer.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rimworld-trailer.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				7024B9D428FE8C2F000CF27E /* DLCBlockView.swift */,
 				7024B9C328FA9874000CF27E /* FactionDetailView.swift */,
 				7024B9C528FAA147000CF27E /* FactionDetail.swift */,
+				70985E4E295B227000FC5A8C /* rimworld-trailer.mp4 */,
 				7024B9D228FE7EF1000CF27E /* DLC.swift */,
 				70861F4728F99B9000FCDDBA /* HomeView.swift */,
 				7024B9CB28FAF1E5000CF27E /* GlitchTextView.swift */,
@@ -156,6 +159,7 @@
 			files = (
 				70861F4128F98C1E00FCDDBA /* Preview Assets.xcassets in Resources */,
 				70861F3E28F98C1E00FCDDBA /* Assets.xcassets in Resources */,
+				70985E4F295B227000FC5A8C /* rimworld-trailer.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
